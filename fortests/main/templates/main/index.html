@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block navs %}
+<li class="nav-item"><a href="{% url 'home' %}" class="nav-link active" aria-current="page">Главная</a></li>
+<li class="nav-item"><a href="{% url 'examples' %}" class="nav-link">Примеры</a></li>
+<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Обо мне</a></li>
+{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>Главная</h1>
+    <div class="alert alert-warning mt-2">
+        <h3>Данный сайт является результатом Лабораторной работы</h3>
+        <p>Дисциплина "Алгоритмы и структуры данных"</p>
+        <br>
+        <h3>Остальную информацию можно посмотреть на страницах:<br>
+            <a href="{% url 'about' %}" class="nav-link">Обо мне</a>
+            <a href="{% url 'examples' %}" class="nav-link">Примеры</a></h3>
+    </div>
+{% endblock %}

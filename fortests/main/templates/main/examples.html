@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Примеры
+{% endblock %}
+
+{% block navs %}
+<li class="nav-item"><a href="{% url 'home' %}" class="nav-link" aria-current="page">Главная</a></li>
+<li class="nav-item"><a href="{% url 'examples' %}" class="nav-link active">Примеры</a></li>
+<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Обо мне</a></li>
+{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>Примеры работ</h1>
+    <p>Примеры работ на языке Python можно посмотреть на странице репозиториев GitHub по ссылке ниже</p>
+    <button class="btn btn-warning" onclick=" window.open('https://github.com/RelicR?tab=repositories','_blank')">
+        RelicR repositories
+    </button><br>
+{% endblock %}
